@@ -13,18 +13,71 @@ body {
   color: white;
 }
 
+/* BOOT SCREEN */
+#bootScreen {
+  position: fixed;
+  inset: 0;
+  background: #05060a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+  text-align: center;
+}
+
+#bootScreen h1 {
+  font-size: 42px;
+  margin: 0;
+  color: #ff0000;
+  text-shadow: 0 0 25px red;
+}
+
+#bootScreen p {
+  margin: 12px 0;
+  opacity: 0.8;
+  color: white;
+  font-size: 16px;
+}
+
+.bootBar {
+  width: 260px;
+  height: 8px;
+  background: rgba(255, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.35);
+}
+
+.bootFill {
+  height: 100%;
+  width: 0%;
+  background: red;
+  box-shadow: 0 0 20px red;
+  transition: width 0.2s linear;
+}
+
+#bootPercent {
+  margin-top: 12px;
+  font-weight: bold;
+  color: red;
+  text-shadow: 0 0 15px red;
+  font-size: 14px;
+}
+
 /* HERO */
 .hero {
   text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(180deg, #06122b, #05060a);
+  background: linear-gradient(180deg, #02002f, #05060a);
 }
 
 .hero h1 {
   font-size: 48px;
   margin: 0;
-  color: #4da3ff;
-  text-shadow: 0 0 20px #1b5cff;
+  color: #ff0000;
+  text-shadow: 0 0 20px #ff0000;
 }
 
 .hero p {
@@ -38,18 +91,18 @@ body {
   margin-top: 25px;
   display: inline-block;
   padding: 14px 28px;
-  background: #1b5cff;
-  color: white;
+  background: #f91919;
+  color: rgb(254, 254, 254);
   text-decoration: none;
   font-weight: bold;
   border-radius: 12px;
-  box-shadow: 0 0 20px #1b5cff;
+  box-shadow: 0 0 20px #ff0101;
   transition: 0.2s;
 }
 
 .download-btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 35px #4da3ff;
+  transform: scale(1.20);
+  box-shadow: 0 0 35px #ff0000;
 }
 
 /* FEATURES */
@@ -64,37 +117,70 @@ body {
   background: rgba(10, 18, 40, 0.7);
   border: 1px solid rgba(77, 163, 255, 0.2);
   border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 0 15px rgba(0, 80, 200, 0.15);
+  padding: 40px;
+  box-shadow: 0 0 15px rgb(255, 0, 0);
   transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 25px rgba(77, 163, 255, 0.3);
+  transform: translateY(-15px);
+  box-shadow: 0 0 25px rgb(250, 0, 0);
 }
 
 .card h3 {
-  color: #4da3ff;
+  color: #ff0000;
   margin-top: 0;
+}
+
+/* VERSION TAG */
+.versionTag {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 0, 0, 0.12);
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 0 0 10px red;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  letter-spacing: 0.5px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 36px;
   opacity: 0.6;
   font-size: 14px;
-  border-top: 1px solid rgba(77, 163, 255, 0.2);
+  border-top: 1px solid rgb(255, 0, 0);
 }
+
 </style>
 
 </head>
 <body>
 
+<div class="versionTag">v0.1.0</div>
+
+<div id="bootScreen">
+  <h1>Midnight Circuit</h1>
+  <p id="bootLine">Initializing Download Server...</p>
+
+  <div class="bootBar">
+    <div class="bootFill" id="bootFill"></div>
+  </div>
+
+  <div id="bootPercent">0%</div>
+</div>
+
 <div class="hero">
   <h1>Midnight Circuit</h1>
-  <p>Neon-powered offline music player for Windows</p>
+  <p>Neon-powered Offline Music Player for Windows</p>
 
   <!-- CHANGE THIS LINK LATER -->
  <a class="download-btn" href="https://github.com/izumikurogane87-hue/Midnight-Circuit-Download-Website-/releases/download/v1.0.0.0/Midnight.Circuit.-.Music.Player.Pro_0.1.0_x64-setup.exe">
@@ -115,18 +201,59 @@ footer {
 
   <div class="card">
     <h3>💾 Offline Library</h3>
-    <p>Your songs stay saved locally using IndexedDB.</p>
+    <p>Your songs stay saved locally, close the app, restart your PC, once uploaded, they won't get cleared, unless you clear them yourself.</p>
   </div>
 
   <div class="card">
     <h3>🖤 Neon UI</h3>
-    <p>Clean navy-blue tech interface with glowing effects.</p>
+    <p>Red and black tech interface with glowing effects.</p>
   </div>
 </div>
 
 <footer>
-  Made with ⚡ Midnight Circuit Engine • 2026
+  Made by Izumi Kurogane. Ran with ⚡ Midnight Circuit Engine • 2026 | All rights reserved
 </footer>
+
+<script>
+const bootScreen = document.getElementById("bootScreen");
+const bootFill = document.getElementById("bootFill");
+const bootPercent = document.getElementById("bootPercent");
+const bootLine = document.getElementById("bootLine");
+
+let boot = 0;
+
+const lines = [
+  "Initializing Download Server...",
+  "Loading Midnight UI...",
+  "Syncing Release Files...",
+  "Verifying Installer Package...",
+  "Activating Neon Interface...",
+  "Boot Complete."
+];
+
+const interval = setInterval(() => {
+  boot += 5;
+
+  bootFill.style.width = boot + "%";
+  bootPercent.textContent = boot + "%";
+
+  const index = Math.floor((boot / 100) * lines.length);
+  bootLine.textContent = lines[Math.min(index, lines.length - 1)];
+
+  if (boot >= 100) {
+    clearInterval(interval);
+
+    setTimeout(() => {
+      bootScreen.style.opacity = "0";
+      bootScreen.style.transition = "0.8s";
+
+      setTimeout(() => {
+        bootScreen.style.display = "none";
+      }, 800);
+    }, 400);
+  }
+}, 120);
+</script>
 
 </body>
 </html>
