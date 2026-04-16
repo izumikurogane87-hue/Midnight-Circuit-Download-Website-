@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight Circuit - Download</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #05060a;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #06122b, #05060a);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+  color: #4da3ff;
+  text-shadow: 0 0 20px #1b5cff;
+}
+
+.hero p {
+  opacity: 0.8;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.download-btn {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 14px 28px;
+  background: #1b5cff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #1b5cff;
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 35px #4da3ff;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background: rgba(10, 18, 40, 0.7);
+  border: 1px solid rgba(77, 163, 255, 0.2);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 80, 200, 0.15);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(77, 163, 255, 0.3);
+}
+
+.card h3 {
+  color: #4da3ff;
+  margin-top: 0;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.6;
+  font-size: 14px;
+  border-top: 1px solid rgba(77, 163, 255, 0.2);
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+  <h1>Midnight Circuit</h1>
+  <p>Neon-powered offline music player for Windows</p>
+
+  <!-- CHANGE THIS LINK LATER -->
+  <a class="download-btn" href="#">
+    ⬇ Download for Windows
+  </a>
+</div>
+
+<div class="features">
+  <div class="card">
+    <h3>⚡ Fast Playback</h3>
+    <p>Instant local audio loading with smooth performance.</p>
+  </div>
+
+  <div class="card">
+    <h3>🎧 Visualizer Engine</h3>
+    <p>Real-time waveform animation synced to your music.</p>
+  </div>
+
+  <div class="card">
+    <h3>💾 Offline Library</h3>
+    <p>Your songs stay saved locally using IndexedDB.</p>
+  </div>
+
+  <div class="card">
+    <h3>🖤 Neon UI</h3>
+    <p>Clean navy-blue tech interface with glowing effects.</p>
+  </div>
+</div>
+
+<footer>
+  Made with ⚡ Midnight Circuit Engine • 2026
+</footer>
+
+</body>
+</html>
